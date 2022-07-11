@@ -3,11 +3,12 @@
 # some:-)th:-))ing -> something
 # :-)( -> (
 
+
 def cut_smile(s: str) -> str:
     cnt = 0
     result = []
     while cnt <= len(s) - 1:
-        if s[cnt] == ':' and s[cnt + 1] == '-' and s[cnt + 2] in (')', '('):
+        if s[cnt] == ":" and s[cnt + 1] == "-" and s[cnt + 2] in (")", "("):
             bracket = s[cnt + 2]
             cnt_bracket = cnt + 2
             while cnt_bracket <= len(s) - 1:
@@ -20,4 +21,4 @@ def cut_smile(s: str) -> str:
         else:
             result.append(s[cnt])
         cnt += 1
-    return ''.join(result)
+    return "".join(result)

@@ -14,7 +14,7 @@ def check_2(s: str) -> bool:
     left = 0
     right = len(s) - 1
     while right >= left:
-        if s[left] or s[right] in (' ', pncts):
+        if s[left] or s[right] in (" ", pncts):
             pass
         else:
             if s[right].lower() != s[left].lower():

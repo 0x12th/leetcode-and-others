@@ -9,7 +9,7 @@ import collections
 
 def get_highest_freq_str(lst: list[str]) -> str:
     dct = collections.defaultdict(int)
-    result = ''
+    result = ""
     max_freq = 0
     for v in lst:
         dct[v] += 1

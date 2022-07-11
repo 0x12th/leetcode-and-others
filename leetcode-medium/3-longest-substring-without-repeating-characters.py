@@ -13,4 +13,3 @@ def lengthOfLongestSubstring(s: str) -> int:
             dct[s[left]] = False
             left += 1
     return result
-

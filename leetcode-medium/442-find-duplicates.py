@@ -10,4 +10,3 @@ def findDuplicates(nums: List[int]) -> List[int]:
         else:
             nums[num - 1] = -nums[num - 1]
     return rs
-

@@ -9,19 +9,23 @@ def rotate_matrix_90_(source: list[list[int]]) -> list[list[int]]:
 
 
 def rotate_matrix_90(source: list[list[int]]) -> list[list[int]]:
-    return [[source[i][j] for i in range(len(source) - 1, -1, -1)] for j in range(len(source))]
+    return [
+        [source[i][j] for i in range(len(source) - 1, -1, -1)]
+        for j in range(len(source))
+    ]
 
 
 def rotate_matrix_180(source: list[list[int]]) -> list[list[int]]:
-    return [[source[i][j] for j in range(len(source)-1, -1, -1)] for i in reversed(range(len(source)))]
+    return [
+        [source[i][j] for j in range(len(source) - 1, -1, -1)]
+        for i in reversed(range(len(source)))
+    ]
 
 
 def rotate_matrix_270(source: list[list[int]]) -> list[list[int]]:
-    return [[source[i][j] for i in range(len(source))] for j in reversed(range(len(source)))]
+    return [
+        [source[i][j] for i in range(len(source))] for j in reversed(range(len(source)))
+    ]
 
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]

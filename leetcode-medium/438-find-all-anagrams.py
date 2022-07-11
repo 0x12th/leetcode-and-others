@@ -4,7 +4,7 @@ from typing import List
 
 def findAnagrams_1(s: str, p: str) -> List[int]:
     start = []
-    window_str = ''
+    window_str = ""
     start_count = 0
     for letter in s:
         window_str += letter

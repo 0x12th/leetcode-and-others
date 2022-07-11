@@ -4,7 +4,7 @@
 # abcadef -> False
 
 
-from collections import defaultdict, Counter
+from collections import Counter, defaultdict
 
 
 def is_unique_0(s: str) -> bool:

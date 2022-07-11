@@ -4,8 +4,8 @@
 # [1, 3, 6, 13, 17], 12 -> -1
 
 
-def get_index(l: list[int], i: int) -> int:
-    for k, v in enumerate(l):
+def get_index(lst: list[int], i: int) -> int:
+    for k, v in enumerate(lst):
         if i == v:
             return k
     return -1

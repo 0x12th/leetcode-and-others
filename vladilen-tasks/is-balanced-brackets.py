@@ -9,7 +9,7 @@
 
 def is_balanced_brackets(s: str) -> bool:
     st = []
-    dct = {'{': '}', '(': ')', '[': ']'}
+    dct = {"{": "}", "(": ")", "[": "]"}
     for br in s:
         if br in dct:
             st.append(br)

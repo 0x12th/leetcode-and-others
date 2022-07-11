@@ -1,6 +1,6 @@
 def isValid(s: str) -> bool:
     stack = []
-    char_deque = {'(': ')', '{': '}', '[': ']'}
+    char_deque = {"(": ")", "{": "}", "[": "]"}
     for bracket in s:
         if bracket in char_deque:
             stack.append(bracket)
