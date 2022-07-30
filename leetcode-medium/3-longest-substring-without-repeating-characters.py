@@ -13,3 +13,15 @@ def lengthOfLongestSubstring(s: str) -> int:
             dct[s[left]] = False
             left += 1
     return result
+
+
+def length_of_longest_substring_2(s: str) -> int:
+    st = set()
+    left, result = 0, 0
+    for right, value in enumerate(s):
+        while value in st:
+            st.remove(s[left])
+            left += 1
+        st.add(value)
+        result = max(right - left + 1, result)
+    return result
