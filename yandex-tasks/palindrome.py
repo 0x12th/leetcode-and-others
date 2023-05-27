@@ -1,6 +1,8 @@
-# 'Do geese see God?' -> True
-# 'Madam, I’m Adam' -> True
-# 'А роза упала на лапу Азора' -> True
+"""
+'Do geese see God?' -> True
+'Madam, I’m Adam' -> True
+'А роза упала на лапу Азора' -> True
+"""
 
 
 from string import punctuation as pncts  # !"#$%&'()*+, -./:;<=>?@[\]^_`{|}~

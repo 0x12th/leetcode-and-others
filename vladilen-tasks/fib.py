@@ -1,4 +1,8 @@
-# fibonacci(8) -> [1, 1, 2, 3, 5, 8, 13, 21]
+"""
+fibonacci(8) -> [1, 1, 2, 3, 5, 8, 13, 21]
+"""
+
+from typing import Iterator
 
 
 def fib_0(n: int) -> list[int]:
@@ -17,7 +21,7 @@ def fib_1(n: int) -> list[int]:
     return lst
 
 
-def fib_2(n: int) -> list[int]:
+def fib_2(n: int) -> Iterator[int]:
     a, b = 0, 1
     for _ in range(n):
         a, b = b, a + b
