@@ -2,7 +2,7 @@ def palindrome_at(s, left, right):
     while left >= 0 and right < len(s) and s[left] == s[right]:
         left -= 1
         right += 1
-    return s[left + 1: right]
+    return s[left + 1 : right]
 
 
 def longest_palindrome_1(s):
@@ -19,7 +19,7 @@ def longest_palindrome_2(s):
     for i in range(len(s)):
         for j in range(len(s) - 1, i - 1, -1):
             if s[i] == s[j]:
-                m = s[i: j + 1]
+                m = s[i : j + 1]
                 if m == m[::-1] and len(res) <= len(m):
                     res = m
     return res

@@ -23,10 +23,8 @@ def find_anagrams_2(s: str, p: str) -> List[int]:
     start_point = 0
     for end in range(len(s)):
         window[s[end]] += 1
-        print(window)
         if end - start_point + 1 == len(p):
             if window == pattern:
-                print(window)
                 result.append(start_point)
             window[s[start_point]] -= 1
             if window[s[start_point]] == 0:

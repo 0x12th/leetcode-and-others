@@ -5,7 +5,7 @@ from typing import DefaultDict
 def count_good_substrings_1(s: str) -> int:
     res = 0
     for k, v in enumerate(s):
-        if len(set(s[k: k + 3])) == 3:
+        if len(set(s[k : k + 3])) == 3:
             res += 1
     return res
 

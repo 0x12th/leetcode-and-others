@@ -27,4 +27,4 @@ def min_window(s: str, t: str) -> str:
     if result[1] == 10**5:
         return ""
 
-    return s[result[0]: result[1] + 1]
+    return s[result[0] : result[1] + 1]
