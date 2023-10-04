@@ -5,7 +5,6 @@ def search_insert(nums: List[int], target: int) -> Optional[int]:
     left = 0
     right = len(nums) - 1
     while left <= right:
-
         if target > nums[right]:
             return right + 1
         if target < nums[left]:
