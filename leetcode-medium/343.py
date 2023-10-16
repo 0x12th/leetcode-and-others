@@ -1,4 +1,4 @@
-def integerBreak(n: int) -> int:
+def integer_break(n: int) -> int:
     if n <= 3:
         return n - 1
     quotient, remainder = divmod(n, 3)
