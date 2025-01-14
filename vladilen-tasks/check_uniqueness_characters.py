@@ -5,7 +5,6 @@ abcABC -> True
 abcadef -> False
 """
 
-
 from collections import Counter, defaultdict
 from typing import DefaultDict
 

@@ -3,7 +3,7 @@
 # @return -1 if num is higher than the picked number
 #          1 if num is lower than the picked number
 #          otherwise return 0
-# def guess(num: int) -> int:
+def guess(num: int) -> int: ...
 
 
 def guess_number(n: int) -> int:

@@ -4,7 +4,6 @@
 ('javascript', 'java') -> false
 """
 
-
 import collections
 
 

@@ -5,7 +5,6 @@
 ['abc', 'abc', 'def', 'def', 'def', 'ghi', 'ghi', 'ghi', 'ghi' ] -> ghi
 """
 
-
 import collections
 from typing import DefaultDict
 

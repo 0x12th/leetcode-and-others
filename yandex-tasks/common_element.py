@@ -2,7 +2,6 @@
 [1, 2, 3, 2, 0], [5, 1, 2, 7, 3, 2] -> [1, 2, 2, 3]
 """
 
-
 from collections import defaultdict
 from typing import List, DefaultDict
 

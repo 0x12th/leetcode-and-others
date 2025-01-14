@@ -4,7 +4,6 @@
 'А роза упала на лапу Азора' -> True
 """
 
-
 from string import punctuation as pncts  # !"#$%&'()*+, -./:;<=>?@[\]^_`{|}~
 
 

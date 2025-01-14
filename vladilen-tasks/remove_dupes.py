@@ -5,7 +5,6 @@
 'abababcdcdcd' -> 'abcd'
 """
 
-
 from collections import Counter
 
 
