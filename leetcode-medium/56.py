@@ -1,8 +1,5 @@
-from typing import List
-
-
-def merge(intervals: List[List[int]]) -> List[List[int]]:
-    merged: List[List[int]] = []
+def merge(intervals: list[list[int]]) -> list[list[int]]:
+    merged: list[list[int]] = []
     intervals.sort(key=lambda interval: interval[0])
     for interval in intervals:
         if not merged or merged[-1][1] < interval[0]:

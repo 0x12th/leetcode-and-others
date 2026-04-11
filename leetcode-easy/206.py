@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -8,7 +5,7 @@ class ListNode:
 
 
 class Solution:
-    def reverse_list(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def reverse_list(self, head: ListNode | None) -> ListNode | None:
         prev_pnt, crt_pnt = None, head  # previously and current pointers
         while crt_pnt:
             next_pnt = crt_pnt.next

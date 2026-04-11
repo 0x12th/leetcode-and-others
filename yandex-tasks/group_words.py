@@ -4,11 +4,10 @@
 """
 
 from collections import defaultdict
-from typing import DefaultDict, List
 
 
-def group_words(words: List[str]) -> List[List[str]]:
-    group: DefaultDict[str, list] = defaultdict(list)
+def group_words(words: list[str]) -> list[list[str]]:
+    group: defaultdict[str, list] = defaultdict(list)
     for word in words:
         group[str(sorted(word))].append(word)
     return [sorted(words) for words in group.values()]

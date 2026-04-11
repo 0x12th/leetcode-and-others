@@ -1,7 +1,4 @@
-from typing import List
-
-
-def max_sub_array(nums: List[int]) -> int:
+def max_sub_array(nums: list[int]) -> int:
     current_sum = max_sum = nums[0]
     for i in range(1, len(nums)):
         num = nums[i]

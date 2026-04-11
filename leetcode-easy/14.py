@@ -1,7 +1,4 @@
-from typing import List
-
-
-def longest_common_prefix(strs: List[str]) -> str:
+def longest_common_prefix(strs: list[str]) -> str:
     result = []
     for z in zip(*strs):
         if len(set(z)) == 1:

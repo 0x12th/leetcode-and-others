@@ -1,8 +1,5 @@
-from typing import Dict, List
-
-
-def two_sum(nums: List[int], target: int) -> List[int]:
-    seen: Dict[int, int] = {}
+def two_sum(nums: list[int], target: int) -> list[int]:
+    seen: dict[int, int] = {}
     for v, value in enumerate(nums):
         if value in seen:
             return [seen[value], v]

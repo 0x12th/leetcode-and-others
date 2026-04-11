@@ -1,8 +1,5 @@
-from typing import List
-
-
-def inserted(intervals: List[List[int]], new_interval: List[int]) -> List[List[int]]:
-    inserted: List[List[int]] = []
+def inserted(intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
+    inserted: list[list[int]] = []
     intervals.append(new_interval)
     intervals.sort(key=lambda interval: interval[0])
     for interval in intervals:

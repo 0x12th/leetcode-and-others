@@ -1,0 +1,36 @@
+[project]
+name = "leetcode-and-others"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "ruff>=0.15.10",
+    "ty>=0.0.29",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E4",
+    "E7",
+    "E9",
+    "F",
+    "I",
+    "UP",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+
+[tool.ty.environment]
+python-version = "3.12"
+
+[tool.ty.src]
+respect-ignore-files = true
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
+]

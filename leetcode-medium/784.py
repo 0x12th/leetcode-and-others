@@ -1,7 +1,4 @@
-from typing import List
-
-
-def letter_case_permutation(s: str) -> List[str]:
+def letter_case_permutation(s: str) -> list[str]:
     result = []
 
     def helper(curr, s, i):

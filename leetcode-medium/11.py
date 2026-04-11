@@ -1,7 +1,4 @@
-from typing import List
-
-
-def max_area(height: List[int]) -> int:
+def max_area(height: list[int]) -> int:
     left, right = 0, len(height) - 1
     max_area = 0
     while left < right:

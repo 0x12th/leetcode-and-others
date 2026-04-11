@@ -1,7 +1,4 @@
-from typing import List
-
-
-def count_points(points: List[List[int]], queries: List[List[int]]) -> List[int]:
+def count_points(points: list[list[int]], queries: list[list[int]]) -> list[int]:
     result = [0] * len(queries)
     for q, query in enumerate(queries):
         for point in points:

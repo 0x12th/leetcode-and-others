@@ -1,7 +1,4 @@
-from typing import List
-
-
-def find_min(self, nums: List[int]) -> int:
+def find_min(self, nums: list[int]) -> int:
     left, right = 0, len(nums) - 1
     while left < right:
         mid = left + (right - left) // 2

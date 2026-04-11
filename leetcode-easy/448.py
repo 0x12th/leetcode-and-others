@@ -1,7 +1,4 @@
-from typing import List
-
-
-def find_disappeared_numbers(nums: List[int]) -> List[int]:
+def find_disappeared_numbers(nums: list[int]) -> list[int]:
     i = 0
 
     while i < len(nums):

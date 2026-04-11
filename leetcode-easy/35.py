@@ -1,7 +1,4 @@
-from typing import List, Optional
-
-
-def search_insert(nums: List[int], target: int) -> Optional[int]:
+def search_insert(nums: list[int], target: int) -> int | None:
     left = 0
     right = len(nums) - 1
     while left <= right:

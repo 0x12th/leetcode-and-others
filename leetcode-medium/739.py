@@ -1,9 +1,6 @@
-from typing import List
-
-
-def daily_temperatures(t: List[int]) -> List[int]:
+def daily_temperatures(t: list[int]) -> list[int]:
     result = [0] * len(t)
-    stack: List[int] = []
+    stack: list[int] = []
     for i in range(len(t)):
         while stack and t[stack[-1]] < t[i]:
             last = stack.pop()

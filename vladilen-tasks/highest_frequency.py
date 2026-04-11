@@ -6,11 +6,10 @@
 """
 
 import collections
-from typing import DefaultDict
 
 
 def get_highest_freq_str(lst: list[str]) -> str:
-    dct: DefaultDict[str, int] = collections.defaultdict(int)
+    dct: collections.defaultdict[str, int] = collections.defaultdict(int)
     result = ""
     max_freq = 0
     for v in lst:

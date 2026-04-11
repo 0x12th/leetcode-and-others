@@ -1,28 +1,31 @@
-from typing import Optional
-
-
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val: int = 0, next: "ListNode | None" = None) -> None:
         self.val = val
         self.next = next
 
 
 class Solution:
     def reverse_between(
-        self, head: Optional[ListNode], left: int, right: int
-    ) -> Optional[ListNode]:
-        if head is not None:
-            prev, cur = None, head
-            for _ in range(left - 1):
-                prev, cur = cur, cur.next
-            conn_node, rev_cur = prev, cur
+        self, head: ListNode | None, left: int, right: int
+    ) -> ListNode | None:
+        if head is None or left == right:
+            return head
 
-            for _ in range(left - 1, right):
-                next_pnt, cur.next = cur.next, prev
-                prev, cur = cur, next_pnt
-            rev_cur.next = next_pnt
-            if conn_node:
-                conn_node.next = prev
-            else:
-                head = prev
-        return head
+        dummy = ListNode(0, head)
+        prev: ListNode = dummy
+
+        for _ in range(left - 1):
+            assert prev.next is not None
+            prev = prev.next
+
+        current = prev.next
+        assert current is not None
+
+        for _ in range(right - left):
+            next_node = current.next
+            assert next_node is not None
+            current.next = next_node.next
+            next_node.next = prev.next
+            prev.next = next_node
+
+        return dummy.next

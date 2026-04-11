@@ -2,7 +2,7 @@
 fibonacci(8) -> [1, 1, 2, 3, 5, 8, 13, 21]
 """
 
-from typing import Iterator
+from collections.abc import Iterator
 
 
 def fib_0(n: int) -> list[int]:

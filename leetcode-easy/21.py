@@ -2,8 +2,6 @@
 [1,2,4], [1,3,4] -> [1, 1, 2, 3, 4, 4]
 """
 
-from typing import Optional
-
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -13,8 +11,8 @@ class ListNode:
 
 class Solution:
     def merge_two_lists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         result = merged = ListNode(0)
 
         while list1 and list2:

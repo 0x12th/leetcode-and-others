@@ -1,10 +1,7 @@
-from typing import List
-
-
-def permute(nums: List[int]) -> List[List[int]]:
+def permute(nums: list[int]) -> list[list[int]]:
     res = []
 
-    def helper(current: List[int], used: List[int]):
+    def helper(current: list[int], used: list[int]):
         if len(nums) == len(current):
             res.append(current[:])
             return

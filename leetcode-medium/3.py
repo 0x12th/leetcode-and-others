@@ -1,10 +1,9 @@
 import collections
-from typing import DefaultDict, Set
 
 
 def length_of_longest_substring(s: str) -> int:
     left, right, result = 0, 0, 0
-    dct: DefaultDict[str, bool] = collections.defaultdict(bool)
+    dct: collections.defaultdict[str, bool] = collections.defaultdict(bool)
     while right < len(s):
         if not dct[s[right]]:
             result = max(result, right - left + 1)
@@ -17,7 +16,7 @@ def length_of_longest_substring(s: str) -> int:
 
 
 def length_of_longest_substring_2(s: str) -> int:
-    st: Set[str] = set()
+    st: set[str] = set()
     left, result = 0, 0
     for right, value in enumerate(s):
         while value in st:

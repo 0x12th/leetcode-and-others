@@ -1,7 +1,4 @@
-from typing import List
-
-
-def product_except_self(nums: List[int]) -> List[int]:
+def product_except_self(nums: list[int]) -> list[int]:
     left = [1 for _ in range(len(nums))]
     right = left[:]
 

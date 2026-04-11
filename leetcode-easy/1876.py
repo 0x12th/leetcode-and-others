@@ -1,5 +1,4 @@
 import collections
-from typing import DefaultDict
 
 
 def count_good_substrings_1(s: str) -> int:
@@ -11,7 +10,7 @@ def count_good_substrings_1(s: str) -> int:
 
 
 def count_good_substrings_2(s: str) -> int:
-    dct: DefaultDict[str, int] = collections.defaultdict(int)
+    dct: collections.defaultdict[str, int] = collections.defaultdict(int)
     left, result = 0, 0
 
     for right, value in enumerate(s):

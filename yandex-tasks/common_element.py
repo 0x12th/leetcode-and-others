@@ -3,11 +3,10 @@
 """
 
 from collections import defaultdict
-from typing import List, DefaultDict
 
 
-def common_elements(a: List[int], b: List[int]) -> List[int]:
-    b_dict: DefaultDict[int, int] = defaultdict(int)
+def common_elements(a: list[int], b: list[int]) -> list[int]:
+    b_dict: defaultdict[int, int] = defaultdict(int)
     for el in b:
         b_dict[el] += 1
     result = []

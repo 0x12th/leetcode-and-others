@@ -1,8 +1,7 @@
 from collections import defaultdict
-from typing import List
 
 
-def group_anagrams(strs: List[str]) -> List[List[str]]:
+def group_anagrams(strs: list[str]) -> list[list[str]]:
     res = defaultdict(list)
     for word in strs:
         lst = [0] * 26

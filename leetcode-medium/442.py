@@ -1,7 +1,4 @@
-from typing import List
-
-
-def find_duplicates(nums: List[int]) -> List[int]:
+def find_duplicates(nums: list[int]) -> list[int]:
     rs = []
     for num in nums:
         num = abs(num)

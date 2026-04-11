@@ -1,7 +1,4 @@
-from typing import List
-
-
-def max_profit(prices: List[int]) -> int:
+def max_profit(prices: list[int]) -> int:
     max_profit = 0
     buy = prices[0]
     for next_price in prices[1:]:

@@ -1,7 +1,4 @@
-from typing import List
-
-
-def search_range(nums: List[int], target: int) -> List[int]:
+def search_range(nums: list[int], target: int) -> list[int]:
     def helper(t: int):
         left = 0
         right = len(nums)

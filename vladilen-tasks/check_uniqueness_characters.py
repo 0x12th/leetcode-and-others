@@ -6,7 +6,6 @@ abcadef -> False
 """
 
 from collections import Counter, defaultdict
-from typing import DefaultDict
 
 
 def is_unique_0(s: str) -> bool:
@@ -21,7 +20,7 @@ def is_unique_0(s: str) -> bool:
 
 
 def is_unique_1(s: str) -> bool:
-    dct: DefaultDict[str, int] = defaultdict(int)
+    dct: defaultdict[str, int] = defaultdict(int)
     for value in s:
         dct[value] += 1
         if dct[value] > 1:

@@ -1,7 +1,4 @@
-from typing import List
-
-
-def num_identical_pairs(nums: List[int]) -> int:
+def num_identical_pairs(nums: list[int]) -> int:
     res = 0
     for i in range(len(nums)):
         n = i

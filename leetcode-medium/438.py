@@ -1,8 +1,7 @@
 from collections import Counter, defaultdict
-from typing import List, DefaultDict
 
 
-def find_anagrams_1(s: str, p: str) -> List[int]:
+def find_anagrams_1(s: str, p: str) -> list[int]:
     start = []
     window_str = ""
     start_count = 0
@@ -16,10 +15,10 @@ def find_anagrams_1(s: str, p: str) -> List[int]:
     return start
 
 
-def find_anagrams_2(s: str, p: str) -> List[int]:
+def find_anagrams_2(s: str, p: str) -> list[int]:
     pattern = Counter(p)
     result = []
-    window: DefaultDict[str, int] = defaultdict(int)
+    window: defaultdict[str, int] = defaultdict(int)
     start_point = 0
     for end in range(len(s)):
         window[s[end]] += 1

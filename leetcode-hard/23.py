@@ -3,8 +3,6 @@
 [[]] -> []
 """
 
-from typing import List, Optional
-
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -14,8 +12,8 @@ class ListNode:
 
 class Solution:
     def merge_two_lists(
-        self, list1: Optional[ListNode], list2: Optional[ListNode]
-    ) -> Optional[ListNode]:
+        self, list1: ListNode | None, list2: ListNode | None
+    ) -> ListNode | None:
         result = merged = ListNode(0)
 
         while list1 and list2:
@@ -31,7 +29,7 @@ class Solution:
 
         return result.next
 
-    def merge_k_lists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
+    def merge_k_lists(self, lists: list[ListNode | None]) -> ListNode | None:
         if len(lists) == 0:
             return None
         elif len(lists) == 1:
