@@ -1,0 +1,8 @@
+{
+  "languages": {
+    "Python": {
+      "show_edit_predictions": false,
+      "show_completions_on_input": true,
+    },
+  },
+}

@@ -5,6 +5,25 @@
 import string
 
 
+def _rle(s: str) -> str:
+    if not s:
+        return ""
+    parts = []
+    count = 1
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            parts.append(s[i - 1])
+            if count > 1:
+                parts.append(str(count))
+            count = 1
+    parts.append(s[-1])
+    if count > 1:
+        parts.append(str(count))
+    return "".join(parts)
+
+
 def rle(s: str) -> str:
     if len(s) == 0:
         return ""

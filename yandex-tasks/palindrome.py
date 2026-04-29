@@ -7,6 +7,24 @@
 from string import punctuation as pncts  # !"#$%&'()*+, -./:;<=>?@[\]^_`{|}~
 
 
+def _check_palindrome(s: str) -> bool:
+    i, j = 0, len(s) - 1
+    while j > i:
+        rev_ch = s[j]
+        ch = s[i]
+        if not rev_ch.isalpha():
+            j -= 1
+            continue
+        if not ch.isalpha():
+            i += 1
+            continue
+        if rev_ch.lower() != ch.lower():
+            return False
+        j -= 1
+        i += 1
+    return True
+
+
 def check_1(s: str) -> bool:
     return s.lower() == s[::-1].lower()
 
