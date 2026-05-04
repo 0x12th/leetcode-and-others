@@ -30,7 +30,4 @@ def is_unique_1(s: str) -> bool:
 
 def is_unique_2(s: str) -> bool:
     dct = Counter(s)
-    for _ in dct:
-        if dct[_] > 1:
-            return False
-    return True
+    return all(count <= 1 for count in dct.values())

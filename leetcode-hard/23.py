@@ -32,10 +32,9 @@ class Solution:
     def merge_k_lists(self, lists: list[ListNode | None]) -> ListNode | None:
         if len(lists) == 0:
             return None
-        elif len(lists) == 1:
+        if len(lists) == 1:
             return lists[0]
-        else:
-            result = lists[0]
+        result = lists[0]
         for _ in range(1, len(lists)):
             result = self.merge_two_lists(result, lists[_])
         return result

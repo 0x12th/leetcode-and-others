@@ -2,7 +2,11 @@
 name = "leetcode-and-others"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = [
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.5.1",
     "ruff>=0.15.10",
     "ty>=0.0.29",
 ]
@@ -20,6 +24,24 @@ select = [
     "I",
     "UP",
 ]
+extend-select = [
+    "ARG",
+    "B",
+    "C4",
+    "PERF",
+    "PIE",
+    "RET",
+    "RUF100",
+    "SIM",
+]
+ignore = [
+    "B905",
+]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = false
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
@@ -29,8 +51,3 @@ python-version = "3.12"
 
 [tool.ty.src]
 respect-ignore-files = true
-
-[dependency-groups]
-dev = [
-    "pre-commit>=4.5.1",
-]

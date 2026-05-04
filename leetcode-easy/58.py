@@ -1,4 +1,4 @@
-def length_of_last_word(self, s: str) -> int:
+def length_of_last_word(s: str) -> int:
     if len(s) == 1:
         return len(s)
     len_last = 0

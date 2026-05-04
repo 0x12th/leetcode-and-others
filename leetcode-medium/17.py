@@ -9,7 +9,7 @@ Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 """
 
 
-def letter_combinations(self, digits: str) -> list[str]:
+def letter_combinations(digits: str) -> list[str]:
     if not digits:
         return []
 

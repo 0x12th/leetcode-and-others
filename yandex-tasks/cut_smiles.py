@@ -17,8 +17,7 @@ def cut_smile(s: str) -> str:
                 if s[cnt_bracket] != bracket:
                     result.append(s[cnt_bracket])
                     break
-                else:
-                    cnt_bracket += 1
+                cnt_bracket += 1
             cnt = cnt_bracket
         else:
             result.append(s[cnt])

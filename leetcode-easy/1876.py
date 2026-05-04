@@ -3,7 +3,7 @@ import collections
 
 def count_good_substrings_1(s: str) -> int:
     res = 0
-    for k, v in enumerate(s):
+    for k, _ in enumerate(s):
         if len(set(s[k : k + 3])) == 3:
             res += 1
     return res

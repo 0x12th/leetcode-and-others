@@ -4,7 +4,6 @@ def integer_break(n: int) -> int:
     quotient, remainder = divmod(n, 3)
     if remainder == 0:
         return 3**quotient
-    elif remainder == 1:
+    if remainder == 1:
         return 3 ** (quotient - 1) * 4
-    else:
-        return 3**quotient * remainder
+    return 3**quotient * remainder
