@@ -18,6 +18,12 @@ repos:
         args: [--fix]
       - id: ruff-format
 
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 4.1.0
+    hooks:
+      - id: sqlfluff-lint
+        files: \.sql$
+
   - repo: local
     hooks:
       - id: update-readme-stats
@@ -33,18 +39,23 @@ repos:
             END = "<!-- stats:end -->"
             LEVELS = (("easy", "1f883d"), ("medium", "bf8700"), ("hard", "cf222e"))
             INTERVIEW_COLORS = ("8250df", "1f883d", "bf8700", "cf222e", "0969da")
+            LEETCODE_EXTENSIONS = (".py", ".sql")
 
-            def count_python_files(path):
+            def count_files(path, extensions):
                 directory = ROOT / path
                 if not directory.exists():
                     return 0
-                return sum(1 for file in directory.glob("*.py") if file.is_file())
+                return sum(
+                    1
+                    for file in directory.iterdir()
+                    if file.is_file() and file.suffix in extensions
+                )
 
             def badge(label, count, color):
                 return f"![{label}](https://img.shields.io/badge/{label.lower()}-{count}-{color})"
 
             leetcode_counts = {
-                level: count_python_files(Path("leetcode") / level)
+                level: count_files(Path("leetcode") / level, LEETCODE_EXTENSIONS)
                 for level, _ in LEVELS
             }
             leetcode_total = sum(leetcode_counts.values())
@@ -57,7 +68,7 @@ repos:
             interviews = ROOT / "interviews"
             categories = sorted(path for path in interviews.iterdir() if path.is_dir())
             interview_counts = {
-                path.name: count_python_files(path.relative_to(ROOT))
+                path.name: count_files(path.relative_to(ROOT), (".py",))
                 for path in categories
             }
             interviews_total = sum(interview_counts.values())

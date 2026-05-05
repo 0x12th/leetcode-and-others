@@ -1,3 +1,11 @@
+"""
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+
+Input: n = 3
+Output: ["((()))","(()())","(())()","()(())","()()()"]
+"""
+
+
 def generate_parenthesis(n: int) -> list[str]:
     result: list[str] = []
 

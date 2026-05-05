@@ -1,3 +1,11 @@
+"""
+Given a string s, return the longest palindromic substring in s.
+
+Input: s = "babad"
+Output: "bab"
+"""
+
+
 def palindrome_at(s, left, right):
     while left >= 0 and right < len(s) and s[left] == s[right]:
         left -= 1

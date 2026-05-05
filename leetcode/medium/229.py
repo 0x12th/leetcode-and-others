@@ -1,3 +1,10 @@
+"""
+Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.
+
+Input: nums = [3,2,3]
+Output: [3]
+"""
+
 import collections
 
 

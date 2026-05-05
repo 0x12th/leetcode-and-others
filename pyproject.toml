@@ -11,6 +11,17 @@ dev = [
     "ty>=0.0.29",
 ]
 
+[tool.sqlfluff.core]
+dialect = "postgres"
+templater = "raw"
+sql_file_exts = ".sql"
+max_line_length = 120
+exclude_rules = "AL01,AL03,AL09,AM05,CP02,LT05,LT09,RF02"
+
+[tool.sqlfluff.indentation]
+indented_joins = false
+indented_using_on = true
+
 [tool.ruff]
 target-version = "py312"
 line-length = 88

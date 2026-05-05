@@ -1,3 +1,12 @@
+"""
+Given an integer n, break it into the sum of k positive integers, where k >= 2, and maximize the product of those integers.
+Return the maximum product you can get.
+
+Input: n = 2
+Output: 1
+"""
+
+
 def integer_break(n: int) -> int:
     if n <= 3:
         return n - 1
